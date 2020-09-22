@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/arvinxx/sketch-json">
-   <img src="https://gw.alipayobjects.com/zos/antfincdn/Og%26AHI5yLW/logo.png" height="200" width="200" alt="Sketch JSON"/>
+   <img src="https://gw.alipayobjects.com/zos/antfincdn/NLKnzMV5pK/logo.png" height="156" width="200" alt="Sketch JSON"/>
   </a>
 </p>
 
