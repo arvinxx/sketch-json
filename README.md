@@ -1,3 +1,4 @@
+<img align="center" src="https://gw.alipayobjects.com/zos/antfincdn/Og%26AHI5yLW/logo.png"/>
 <h1 align="center">Sketch JSON</h1>
 
 <div align="center">
