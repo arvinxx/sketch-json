@@ -2,7 +2,9 @@
 <img src="https://gw.alipayobjects.com/zos/antfincdn/Og%26AHI5yLW/logo.png" height="200" width="200" alt="Sketch JSON"/>
 <h1>Sketch JSON</h1>
 </div>
+
 <div align="center">
+
 [![Version][version-badge]][tag-url]  ![install size][github-size]
 
 [![david deps][david-image]][david-url] [![david devDeps][david-dev-image]][david-dev-url]
