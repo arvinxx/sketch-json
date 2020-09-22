@@ -1,3 +1,43 @@
-# Sketch JSON
+<h1 align="center">Sketch JSON</h1>
 
+<div align="center">
+
+[![Version][version-badge]][tag-url]  ![install size][github-size]
+
+[![david deps][david-image]][david-url] [![david devDeps][david-dev-image]][david-dev-url]
+
+[![Build With skpm][skpm-badge-url]][skpm-url] [![Build With umi][umi-badge-url]][umi-url]
+
+[umi-badge-url]: https://img.shields.io/badge/build%20with-umi-blue.svg
+[umi-url]: https://github.com/umijs/umi/
+[skpm-badge-url]: https://img.shields.io/badge/build%20with-skpm-ef9f39.svg
+[skpm-url]: https://github.com/skpm/skpm/
+
+<!-- version url -->
+
+[version-badge]: https://img.shields.io/github/package-json/v/arvinxx/sketch-json
+[tag-url]: https://github.com/arvinxx/sketch-json/tags
+[github-size]: https://img.shields.io/github/repo-size/arvinxx/sketch-json
+
+<!-- coverage -->
+
+[coverage]: https://codecov.io/gh/arvinxx/sketch-json/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/arvinxx/sketch-json/branch/master
+
+<!-- Github CI -->
+
+[test-ci]: https://github.com/arvinxx/sketch-json/workflows/Test%20CI/badge.svg
+[deploy-ci]: https://github.com/arvinxx/sketch-json/workflows/Deploy%20CI/badge.svg
+[test-ci-url]: https://github.com/arvinxx/sketch-json/actions?query=workflow%3ATest%20CI
+[deploy-ci-ci]: https://github.com/arvinxx/sketch-json/actions?query=workflow%3ADeploy%20CI
+[david-image]: https://img.shields.io/david/arvinxx/sketch-json?style=flat-square
+[david-dev-url]: https://david-dm.org/arvinxx/sketch-json?type=dev
+[david-dev-image]: https://img.shields.io/david/dev/arvinxx/sketch-json?style=flat-square
+[david-url]: https://david-dm.org/arvinxx/sketch-json
+
+</div>
+
+------
 a plugin to transfer sketch JSON into sketch Object
+
+work with [html2sketch](https://github.com/ant-design/html2sketch)
