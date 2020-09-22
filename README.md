@@ -1,7 +1,6 @@
-<img align="center" src="https://gw.alipayobjects.com/zos/antfincdn/Og%26AHI5yLW/logo.png"/>
-<h1 align="center">Sketch JSON</h1>
-
 <div align="center">
+<img src="https://gw.alipayobjects.com/zos/antfincdn/QxuxXOjSw0/logo.png"/>
+<h1 align="center">Sketch JSON</h1>
 
 [![Version][version-badge]][tag-url]  ![install size][github-size]
 
