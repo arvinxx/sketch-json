@@ -1,6 +1,6 @@
 {
   "name": "sketch-json",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "a plugin to transfer sketch JSON into sketch Object",
   "engines": {
     "sketch": ">=3.0"
