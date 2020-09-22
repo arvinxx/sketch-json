@@ -1,11 +1,12 @@
 {
   "name": "sketch-json",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "a plugin to transfer sketch JSON into sketch Object",
   "engines": {
     "sketch": ">=3.0"
   },
   "homepage": "https://github.com/arvinxx/sketch-json",
+  "repository": "https://github.com/arvinxx/sketch-json",
   "skpm": {
     "name": "sketch-json",
     "manifest": "src/sketch/manifest.js",
