@@ -1,5 +1,4 @@
-import { AllLayers, Page, Selection } from 'sketch/dom';
-import { Document } from 'sketch';
+import { AllLayers, Page, Selection, Document } from 'sketch/dom';
 
 export const isArtboard = (layer: AllLayers | Document) =>
   layer.type === 'Artboard' || layer.type === 'SymbolMaster';
