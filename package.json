@@ -1,52 +1,42 @@
 {
-  "name": "sketch-plugin-template",
+  "name": "sketch-json",
   "version": "1.0.0",
-  "description": "modern sketch plugin develop template",
+  "description": "a plugin to transfer sketch JSON into sketch Object",
   "engines": {
     "sketch": ">=3.0"
   },
+  "homepage": "https://github.com/arvinxx/sketch-json",
   "skpm": {
-    "name": "sketch-plugin-template",
-    "manifest": "src/manifest.js",
-    "main": "sketch-plugin-template.sketchplugin",
+    "name": "sketch-json",
+    "manifest": "src/sketch/manifest.js",
+    "main": "sketch-json.sketchplugin",
     "assets": [
       "static/**/*",
       "dist"
     ]
   },
   "scripts": {
-    "dev": "concurrently \"npm run dev:resources\" \"npm run dev:sketch\"",
-    "dev:sketch": "NODE_ENV=development skpm-build --watch",
-    "dev:resources": "APP_ROOT=src/resources PORT=8110 BROWSER=none umi dev",
-    "test:resources": "APP_ROOT=src/resources umi test",
-    "dev:sketch-only": "npm run build:resources &&NODE_ENV=prod skpm-build --watch",
-    "build": "npm run build:resources && npm run clean && npm run build:sketch",
-    "build:sketch": "NODE_ENV=prod skpm-build",
-    "build:resources": "APP_ROOT=src/resources umi build",
-    "build:resources-analyze": "APP_ROOT=src/resources ANALYZE=1 umi build",
+    "dev": "NODE_ENV=development skpm-build --watch",
+    "build": "npm run clean && NODE_ENV=prod skpm-build",
     "clean": "rm -rf ./*.sketchplugin",
     "refresh": "find ./*.sketchplugin -name \"*_ts\" | entr -r /Applications/Sketch.app/Contents/MacOS/Sketch",
     "postinstall": "npm run build && skpm-link"
   },
   "devDependencies": {
+    "@sketch-hq/sketch-file-format-ts": "^5.1.1",
     "@skpm/builder": "^0.7.7",
     "@typescript-eslint/eslint-plugin": "^3.1.0",
     "@typescript-eslint/parser": "^3.1.0",
     "concurrently": "^5.2.0",
     "eslint": "^7.1.0",
-    "sketch": "^0.2.0",
-    "sketch-module-web-view": "^3.4.1",
-    "terser-webpack-plugin": "^3.0.3",
-    "ts-loader": "^7.0.5",
-    "typescript": "^3.9.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "@umijs/preset-react": "1.x",
-    "@umijs/test": "^3.2.3",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
-    "umi": "^3.2.3",
-    "yorkie": "^2.0.0"
+    "sketch-typings": "^0.2.0",
+    "terser-webpack-plugin": "^3.0.3",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5"
   },
-  "__npminstall_done": false
+  "dependencies": {
+    "from-sketch-json": "^0.1.1"
+  }
 }

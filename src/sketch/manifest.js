@@ -1,29 +1,23 @@
-const name =
-  'Sketch Plugin Template' + process.env.NODE_ENV === 'development'
-    ? ' DEV'
-    : '';
+const name = 'Sketch JSON';
+
 module.exports = {
   compatibleVersion: 3,
   bundleVersion: 1,
   name,
-  homepage:
-    'https://github.com/arvinxx/sketch-plugin-skpm-umi-typescript-example',
-  identifier:
-    process.env.NODE_ENV === 'development'
-      ? 'sketch-plugin-template.dev'
-      : 'sketch-plugin-template',
-
+  homepage: 'https://github.com/arvinxx/sketch-json',
+  identifier: 'sketch-json',
   icon: 'icons/logo.png',
   commands: [
     {
-      name: 'Plugin Info',
-      identifier: 'sketch-plugin-template.system-info',
+      name: 'Paste Sketch JSON',
+      identifier: 'sketch-json.paste-as-json',
       script: './app.ts',
-      handler: 'systemInfo',
+      shortcut: 'ctrl alt v',
+      handler: 'pasteSketchJSON',
     },
   ],
   menu: {
     title: name,
-    items: ['-', 'sketch-plugin-template.system-info'],
+    items: ['-', 'sketch-json.paste-as-json'],
   },
 };
