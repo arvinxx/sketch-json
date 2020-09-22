@@ -1,7 +1,11 @@
-<div align="center">
-<img src="https://gw.alipayobjects.com/zos/antfincdn/Og%26AHI5yLW/logo.png" height="200" width="200" alt="Sketch JSON"/>
-<h1>Sketch JSON</h1>
-</div>
+<p align="center">
+  <a href="https://github.com/arvinxx/sketch-json">
+   <img src="https://gw.alipayobjects.com/zos/antfincdn/Og%26AHI5yLW/logo.png" height="200" width="200" alt="Sketch JSON"/>
+  </a>
+</p>
+
+<h1 align="center">Sketch JSON</h1>
+
 
 <div align="center">
 
