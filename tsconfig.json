@@ -20,6 +20,7 @@
     "lib": ["dom", "es2015", "es2016", "es2017"],
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types", "./node_modules/sketch-typings"],
     "paths": {
       "typings/*": ["typings/*"],
       "@/*": ["src/*"]
