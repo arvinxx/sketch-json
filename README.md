@@ -45,6 +45,19 @@
 </div>
 
 ------
-a plugin to transfer sketch JSON into sketch Object
+Parsing Sketch JSON into Sketch Object
 
-work with [html2sketch](https://github.com/ant-design/html2sketch)
+basically work with [html2sketch](https://github.com/ant-design/html2sketch)
+
+![demo](https://gw.alipayobjects.com/zos/antfincdn/IkfYjMwh0H/demo.gif)
+
+## Usage
+
+1. Download plugin and install ➡️ [Latest Release](https://github.com/arvinxx/sketch-json/releases)
+2. Copy Sketch JSON ➡️ (Try this [Example](https://gw.alipayobjects.com/os/antfincdn/Q4xee9ggov/sketch-json.json))
+3. Run `Paste Sketch JSON` command in plugin menu or use shortcut `Ctrl` + `Alt` + `V` 
+
+
+## License
+
+[MIT](./LICENSE) ® Arvin Xu
