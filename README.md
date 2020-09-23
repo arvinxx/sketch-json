@@ -49,7 +49,7 @@ Parsing Sketch JSON into Sketch Object
 
 basically work with [html2sketch](https://github.com/ant-design/html2sketch)
 
-![demo](https://gw.alipayobjects.com/zos/antfincdn/IkfYjMwh0H/demo.gif)
+![demo](https://gw.alipayobjects.com/zos/antfincdn/TrL5ejOKSE/demo.gif)
 
 ## Usage
 
