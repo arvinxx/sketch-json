@@ -21,6 +21,7 @@
     "dev": "NODE_ENV=development skpm-build --watch",
     "build": "npm run clean && NODE_ENV=prod skpm-build",
     "clean": "rm -rf ./*.sketchplugin",
+    "prerelease": "npm run build",
     "refresh": "find ./*.sketchplugin -name \"__*.js\" | entr -r /Applications/Sketch.app/Contents/MacOS/Sketch",
     "postinstall": "npm run build && skpm-link"
   },
@@ -33,6 +34,7 @@
     "eslint": "^7.1.0",
     "lint-staged": "^10.0.7",
     "prettier": "^2.3.2",
+    "skpm": "^1.3.2",
     "sketch-typings": "^0.2.1",
     "terser-webpack-plugin": "^3.0.3",
     "ts-loader": "^7.0.5",
