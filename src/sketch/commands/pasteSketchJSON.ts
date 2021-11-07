@@ -1,7 +1,7 @@
 import { UI } from 'sketch';
 import { AllLayers, ChildLayer, Document, fromNative } from 'sketch/dom';
-import SketchFormat from '@sketch-hq/sketch-file-format-ts';
-import { fromSJSON } from 'from-sketch-json';
+import SketchFormat from 'sketch-types';
+import { fromSJSON } from 'sketch-json-helper';
 
 import { getTextFromClipboard } from '../function/clipboard';
 import { documentContext } from '@/sketch/function/find';

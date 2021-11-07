@@ -14,6 +14,7 @@ export const getTextFromClipboard = (): string => {
 export const copyTextToClipboard = (text: string) => {
   const pasteboard = NSPasteboard.generalPasteboard();
   pasteboard.clearContents();
+  // @ts-ignore
   pasteboard.writeObjects([text]);
 
   UI.message('复制成功!');
@@ -22,7 +23,7 @@ export const copyTextToClipboard = (text: string) => {
 /**
  * 获取粘贴的图片
  **/
-export const getImageFromClipboard = (): NSImage | undefined => {
+export const getImageFromClipboard = (): cocoascript.NSImage | undefined => {
   const pasteboard = NSPasteboard.generalPasteboard();
 
   const imgData = pasteboard.dataForType(NSPasteboardTypePNG);
