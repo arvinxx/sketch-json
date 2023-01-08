@@ -1,10 +1,10 @@
 import { UI } from 'sketch';
-import { AllLayers, ChildLayer, Document, fromNative } from 'sketch/dom';
-import SketchFormat from 'sketch-types';
 import { fromSJSON } from 'sketch-json-helper';
+import SketchFormat from 'sketch-types';
+import { AllLayers, BasicLayer, Document, fromNative } from 'sketch/dom';
 
-import { getTextFromClipboard } from '../function/clipboard';
 import { documentContext } from '@/sketch/function/find';
+import { getTextFromClipboard } from '../function/clipboard';
 
 /* istanbul ignore file */
 /**
@@ -37,7 +37,7 @@ const adjustFrame = (layer: AllLayers) => {
 
 const errorMsg = '[Sketch JSON]不是有效的 Sketch JSON 对象😶';
 
-const centerLayer = (layer: ChildLayer) => {
+const centerLayer = (layer: BasicLayer) => {
   const { width, height } = layer.frame;
 
   const { document } = documentContext();
@@ -45,9 +45,7 @@ const centerLayer = (layer: ChildLayer) => {
 
   const canvasView = document.sketchObject.contentDrawView();
 
-  const { x, y } = canvasView.viewCenterInAbsoluteCoordinatesForViewPort(
-    canvasView.viewPort()
-  );
+  const { x, y } = canvasView.viewCenterInAbsoluteCoordinatesForViewPort(canvasView.viewPort());
   layer.frame.x = x - width / 2;
   layer.frame.y = y - height / 2;
 };
@@ -65,7 +63,7 @@ const transformToSketch = (layer: SketchFormat.AnyLayer, center = true) => {
   const do_objectID = uuid();
   Object.assign(layer, { do_objectID });
   const nativeLayer = fromSJSON(layer as any);
-  const sketchObj = fromNative(nativeLayer) as ChildLayer;
+  const sketchObj = fromNative(nativeLayer) as BasicLayer;
 
   adjustFrame(sketchObj);
   Document.getSelectedDocument().selectedPage.layers.push(sketchObj);
@@ -81,8 +79,7 @@ const transformToSketch = (layer: SketchFormat.AnyLayer, center = true) => {
 export const pasteSketchJSON = () => {
   const text = getTextFromClipboard();
   try {
-    const json: SketchFormat.AnyLayer | SketchFormat.AnyLayer[] =
-      JSON.parse(text);
+    const json: SketchFormat.AnyLayer | SketchFormat.AnyLayer[] = JSON.parse(text);
     if (json instanceof Array) {
       for (const obj of json) {
         transformToSketch(obj, false);

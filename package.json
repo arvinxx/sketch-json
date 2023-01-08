@@ -3,11 +3,37 @@
   "version": "1.2.0",
   "private": true,
   "description": "Transfer Sketch JSON into Sketch Object",
-  "engines": {
-    "sketch": ">=3.0"
-  },
   "homepage": "https://github.com/arvinxx/sketch-json",
   "repository": "https://github.com/arvinxx/sketch-json",
+  "scripts": {
+    "build": "npm run clean && NODE_ENV=prod skpm-build",
+    "clean": "rm -rf ./*.sketchplugin",
+    "dev": "NODE_ENV=development skpm-build --watch",
+    "postinstall": "npm run build && skpm-link",
+    "prerelease": "npm run build",
+    "refresh": "find ./*.sketchplugin -name \"__*.js\" | entr -r /Applications/Sketch.app/Contents/MacOS/Sketch"
+  },
+  "dependencies": {
+    "sketch-json-helper": "^1"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.8.0",
+    "@umijs/lint": "^4",
+    "cocoascript-types": "latest",
+    "concurrently": "^5.2.0",
+    "eslint": "^8",
+    "lint-staged": "^13",
+    "prettier": "^2",
+    "prettier-plugin-organize-imports": "^3",
+    "prettier-plugin-packagejson": "^2",
+    "sketch-internal-types": "latest",
+    "sketch-types": "latest",
+    "skpm": "^1",
+    "terser-webpack-plugin": "^3.0.3",
+    "ts-loader": "^7.0.5",
+    "typescript": "^4",
+    "webpack": "^4"
+  },
   "skpm": {
     "name": "sketch-json",
     "manifest": "src/sketch/manifest.js",
@@ -16,30 +42,5 @@
       "static/**/*",
       "dist"
     ]
-  },
-  "scripts": {
-    "dev": "NODE_ENV=development skpm-build --watch",
-    "build": "npm run clean && NODE_ENV=prod skpm-build",
-    "clean": "rm -rf ./*.sketchplugin",
-    "prerelease": "npm run build",
-    "refresh": "find ./*.sketchplugin -name \"__*.js\" | entr -r /Applications/Sketch.app/Contents/MacOS/Sketch",
-    "postinstall": "npm run build && skpm-link"
-  },
-  "devDependencies": {
-    "@skpm/builder": "^0.7.7",
-    "@typescript-eslint/eslint-plugin": "^3.1.0",
-    "@typescript-eslint/parser": "^3.1.0",
-    "concurrently": "^5.2.0",
-    "eslint": "^7.1.0",
-    "lint-staged": "^10.0.7",
-    "prettier": "^2.3.2",
-    "skpm": "^1.3.2",
-    "sketch-types": "latest",
-    "terser-webpack-plugin": "^3.0.3",
-    "ts-loader": "^7.0.5",
-    "typescript": "^4.4.4"
-  },
-  "dependencies": {
-    "sketch-json-helper": "^1.1.0"
   }
 }

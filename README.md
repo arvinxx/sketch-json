@@ -11,7 +11,6 @@
 
 [![Version][version-badge]][tag-url]  ![install size][github-size]
 
-[![david deps][david-image]][david-url] [![david devDeps][david-dev-image]][david-dev-url]
 
 [![Build With skpm][skpm-badge-url]][skpm-url] [![Build With umi][umi-badge-url]][umi-url]
 
@@ -37,10 +36,6 @@
 [deploy-ci]: https://github.com/arvinxx/sketch-json/workflows/Deploy%20CI/badge.svg
 [test-ci-url]: https://github.com/arvinxx/sketch-json/actions?query=workflow%3ATest%20CI
 [deploy-ci-ci]: https://github.com/arvinxx/sketch-json/actions?query=workflow%3ADeploy%20CI
-[david-image]: https://img.shields.io/david/arvinxx/sketch-json?style=flat-square
-[david-dev-url]: https://david-dm.org/arvinxx/sketch-json?type=dev
-[david-dev-image]: https://img.shields.io/david/dev/arvinxx/sketch-json?style=flat-square
-[david-url]: https://david-dm.org/arvinxx/sketch-json
 
 </div>
 
